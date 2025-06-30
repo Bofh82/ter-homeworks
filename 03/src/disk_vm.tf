@@ -8,6 +8,7 @@ resource "yandex_compute_disk" "storage_disk" {
 
 resource "yandex_compute_instance" "storage" {
   name        = "storage"
+  hostname    = "storage"
   platform_id = var.default_platform_id
   resources {
     cores  = var.storage_cores

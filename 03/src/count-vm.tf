@@ -1,6 +1,7 @@
 resource "yandex_compute_instance" "web" {
   count = 2
   name = "web-${count.index + 1}"
+  hostname = "web-${count.index + 1}"
   platform_id = var.default_platform_id
   resources {
     cores  = var.web_cores

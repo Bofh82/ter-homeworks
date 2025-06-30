@@ -1,0 +1,16 @@
+[webservers]
+%{ for web in jsondecode(webservers) ~}
+${web.name} ansible_host=${web.ansible_host} fqdn=${web.fqdn}
+%{ endfor ~}
+
+defaults ansible_user=ubuntu
+
+[databases]
+%{ for db in jsondecode(databases) ~}
+${db.name} ansible_host=${db.ansible_host} fqdn=${db.fqdn}
+%{ endfor ~}
+
+[storage]
+%{ for storage in jsondecode(storage_group) ~}
+${storage.name} ansible_host=${storage.ansible_host} fqdn=${storage.fqdn}
+%{ endfor ~} 
