@@ -1,4 +1,3 @@
-
 # Имя ВМ
 variable "vm_web_name" {
   type        = string
@@ -14,25 +13,25 @@ variable "vm_web_platform_id" {
 }
 
 # Количество ядер CPU
-variable "vm_web_cores" {
-  type        = number
-  default     = 2
-  description = "Количество vCPU"
-}
+#variable "vm_web_cores" {
+#  type        = number
+#  default     = 2
+#  description = "Количество vCPU"
+#}
 
 # Объём RAM (в ГБ)
-variable "vm_web_memory" {
-  type        = number
-  default     = 2
-  description = "Объём оперативной памяти (ГБ)"
-}
+#variable "vm_web_memory" {
+#  type        = number
+#  default     = 2
+#  description = "Объём оперативной памяти (ГБ)"
+#}
 
 # Доля CPU (20, 50, 100 для standard-v3)
-variable "vm_web_core_fraction" {
-  type        = number
-  default     = 20
-  description = "Гарантированная доля vCPU (%)"
-}
+#variable "vm_web_core_fraction" {
+#  type        = number
+#  default     = 20
+#  description = "Гарантированная доля vCPU (%)"
+#}
 
 # ID образа ОС (Ubuntu 20.04)
 variable "vm_web_image_id" {
@@ -63,25 +62,25 @@ variable "vm_db_platform_id" {
 }
 
 # Количество ядер CPU
-variable "vm_db_cores" {
-  type        = number
-  default     = 2
-  description = "Количество vCPU"
-}
+#variable "vm_db_cores" {
+#  type        = number
+#  default     = 2
+#  description = "Количество vCPU"
+#}
 
 # Объём RAM (в ГБ)
-variable "vm_db_memory" {
-  type        = number
-  default     = 2
-  description = "Объём оперативной памяти (ГБ)"
-}
+#variable "vm_db_memory" {
+#  type        = number
+#  default     = 2
+#  description = "Объём оперативной памяти (ГБ)"
+#}
 
 # Доля CPU (20, 50, 100 для standard-v3)
-variable "vm_db_core_fraction" {
-  type        = number
-  default     = 20
-  description = "Гарантированная доля vCPU (%)"
-}
+#variable "vm_db_core_fraction" {
+#  type        = number
+#  default     = 20
+#  description = "Гарантированная доля vCPU (%)"
+#}
 
 # ID образа ОС (Ubuntu 20.04)
 variable "vm_db_image_id" {

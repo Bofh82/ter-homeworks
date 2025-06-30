@@ -35,3 +35,19 @@ variable "vms_ssh_root_key" {
   default     = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKQ3ek4XRFwzE61vA2YqkfzLmvxrrU9dbWXQB5W3cnI+ rodionov_s@inbox.ru"
   description = "ssh-keygen -t ed25519"
 }
+
+variable "vms_resources" {
+  description = "VM resources configuration for web and db VMs"
+  type = map(object({
+    cores         = number
+    memory        = number
+    core_fraction = number
+    hdd_size      = number
+    hdd_type      = string
+  }))
+}
+
+variable "metadata" {
+  description = "Common metadata for all VMs"
+  type        = map(string)
+}
